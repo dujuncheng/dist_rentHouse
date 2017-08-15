@@ -3,14 +3,14 @@
       }
       body{
         margin: 0px;
-      }</style><link href=./static/css/app.b42139dc9aaf19716106cbb1f43c352e.css rel=stylesheet></head><body><div id=app></div><script>var dataarr = text.split('a');
+      }</style><link href=./static/css/app.80ac9cd981b426e5e8226d99e67d2743.css rel=stylesheet></head><body><div id=app></div><script src=/static/data/textdata.js></script><script>var dataarr = text.split('a');
       var temp = [];
       for ( var i = 0; i < dataarr.length; i++){
         dataarr[i] = dataarr[i].substr(0, dataarr[i].length-1)
         if( dataarr[i].length !== 0 ){
            var temparr = dataarr[i].split(',');
             for ( var x = 0; x< temparr.length;x++){
-              temparr[x] = 0+temparr[x]
+              temparr[x] = +temparr[x]
             }
             temp.push(temparr)
         }
@@ -20,8 +20,13 @@
       for(var i = 0; i<1000;i++){
         colorarr[i] = 'rgba(50,204,254,' + i*1/1000 + ')'
       }
-      console.log(colorarr);</script><script type=text/javascript>window.onload = function () {
-        var myChart = echarts.init(document.getElementById('main'));
+      console.log(colorarr);
+      console.log(testsss,'sssssssss');</script><script type=text/javascript>window.onload = function () {
+        alert(2)
+      }
+      window.onload = function () {
+        alert(0);
+        var myChart = echarts.init(document.getElementById('hot-map-app'));
         myChart.setOption(option = {
           animation: false,
           bmap: {
@@ -37,13 +42,13 @@
             seriesIndex: 0,
             calculable: true,
             inRange: {
-              color: ['#FF8577','#eac736','#3065FF'].reverse()
+              color: ['#FF8577','#eac736','#3065FF','red'].reverse()
             }
           },
           series: [{
             type: 'heatmap',
             coordinateSystem: 'bmap',
-//            data: testsss,
+            data: testsss,
             pointSize: 8,
             blurSize: 8
           }]
@@ -53,4 +58,4 @@
           var bmap = myChart.getModel().getComponent('bmap').getBMap();
           bmap.addControl(new BMap.MapTypeControl());
         }
-      }</script><script src=static/js/tags.js></script><script type=text/javascript src=./static/js/manifest.2d00499459eece272577.js></script><script type=text/javascript src=./static/js/vendor.2c6cd1ffeb6f25bfb0f7.js></script><script type=text/javascript src=./static/js/app.a9f468e00e40e5a8a57d.js></script></body></html>
+      }</script><script src=static/js/tags.js></script><script type=text/javascript src=./static/js/manifest.0f1625038a25bd110d04.js></script><script type=text/javascript src=./static/js/vendor.b2748adcb1fcd9088587.js></script><script type=text/javascript src=./static/js/app.307b442c16c974da1931.js></script></body></html>
